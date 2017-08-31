@@ -1,0 +1,33 @@
+
+  <button md-raised-button (click)="logout()" style="margin-left: 2%">Logout</button>
+
+<div class="container">
+  <div>
+
+    <h1 style="font-family: 'Raleway'"><u>Dashboard</u></h1>
+    <span><button md-fab class="btn btn-secondary new-note-btn" routerLink="/new-task"><md-icon>+</md-icon></button></span>
+    <!--My loop-->
+
+
+    <!--end-->
+    <div class="container card-note">
+    <md-card *ngFor="let task of myTasks | async" class="example-card card-note ">
+      <md-card-header>
+        <!--<div md-card-avatar class="example-header-image"></div>-->
+        <md-card-title><b><i class="fa fa-book"></i>  {{task.message.title}}</b></md-card-title>
+        <md-card-subtitle>Subject: "{{task.message.subject}}"</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <p><i>Description:</i>
+          {{task.message.description}}
+        </p>
+      </md-card-content>
+      <md-card-actions>
+        <button md-button class="btn-danger" (click)="removeTask(task)">Remove</button>
+        <button md-button class="btn-success" (click)="edit(task)" >Edit</button>
+      </md-card-actions>
+    </md-card>
+
+    </div>
+  </div>
+</div>

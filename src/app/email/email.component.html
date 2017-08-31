@@ -1,0 +1,15 @@
+<div class="well form-container">
+  <a routerLink="/login" id="alc">Go back</a>
+  <h2>Custom Login</h2>
+
+  <span class="error" *ngIf="error">{{ error }}</span>
+
+  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+    <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+    <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+
+    <button md-raised-button type="submit" [disabled]="!formData.valid" class="alc">Log in</button>
+    <a routerLink="/signup" class="alc">Don't have an account?</a>
+  </form>
+</div>

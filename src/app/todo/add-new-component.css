@@ -1,0 +1,18 @@
+.example-form {
+  width:500px;
+
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.back-button{
+  bottom: auto;
+  right: auto;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  position: fixed;
+  vertical-align: middle;
+}

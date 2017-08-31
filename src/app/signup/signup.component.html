@@ -1,0 +1,16 @@
+<div class="form-container well">
+  <a routerLink="/login" id="alc">Go back</a>
+
+  <h2>Join now</h2>
+
+  <span class="error" *ngIf="error">{{ error }}</span>
+
+  <form #formData='ngForm' (ngSubmit)="onSubmit(formData)">
+
+    <input type="text" placeholder="Email address.." (ngModel)="email" name="email" class="txt" required>
+    <input type="password" placeholder="Password" (ngModel)="password" name="password" class="txt" required>
+
+
+    <button md-raised-button type="submit" [disabled]="!formData.valid">Create my account</button>
+  </form>
+</div>
