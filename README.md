@@ -1,4 +1,4 @@
-# LoginSample
+# NotesMEDown
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.1.
 Start by first creating a Firebase ID and den a firebase project directory. Then proceed by including your creditentials to app.module file inside src/app.
